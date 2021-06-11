@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+    <title>Purplecode | Register</title>
+</head>
+<body>
+    <div class="container px-4 py-4 mx-auto">
+        <div class="card card0">
+            <div class="d-flex flex-column-reverse">
+                <div class="card card1">
+                    <div class="row justify-content-center my-auto">
+                        <div class="col-md-8 col-10 my-5">
+                            <h3 class="text-center">Login</h3>
+                            <div class="bottom text-center">
+                                <button class="btn btn-white ml-2" onclick='location.href = "http://localhost:5000/api/login" '>Einloggen</button></p>
+                            </div><br>
+                            <form method="POST" action="http://localhost:5000/api/register">
+                            <div class="form-group"> <label class="form-control-label text-muted">Email</label> <input type="text" id="email" name="email" placeholder="Email" class="form-control"> </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Nutzername</label> <input maxlength="10" type="text" id="email" name="nutzername" placeholder="Nutzername" class="form-control"> </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Passwort</label> <input type="password" id="psw" name="password" placeholder="Passwort" class="form-control"> </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">Passwort wiederholen</label> <input type="password" id="password2" name="password2" placeholder="Passwort wiederholen" class="form-control"> </div>
+                            <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color" type="submit">Registrieren</button> </div>
+                            <% if(error == true) { %>
+                            <div class="alert">
+                                <span class="closebtn">&times;</span>  
+                                <strong>Fehler!</strong> <%= message %>
+                            </div>
+                            <% } %>
+
+                              <script>
+                              var close = document.getElementsByClassName("closebtn");
+                              var i;
+                              
+                              for (i = 0; i < close.length; i++) {
+                                close[i].onclick = function(){
+                                  var div = this.parentElement;
+                                  div.style.opacity = "0";
+                                  setTimeout(function(){ div.style.display = "none"; }, 600);
+                                }
+                              }
+                              </script>
+                            </form>
+                           
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .alert {
+          padding: 20px;
+          background-color: #f44336;
+          color: white;
+          opacity: 1;
+          transition: opacity 0.6s;
+          margin-bottom: 15px;
+        }
+        
+        .alert.success {background-color: #04AA6D;}
+        .alert.info {background-color: #2196F3;}
+        .alert.warning {background-color: #ff9800;}
+        
+        .closebtn {
+          margin-left: 15px;
+          color: white;
+          font-weight: bold;
+          float: right;
+          font-size: 22px;
+          line-height: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+          color: black;
+        }
+        </style>
+    <style>
+    html, body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-image: url(https://media.discordapp.net/attachments/819915409661886504/851877838978285588/star.jpg?width=1050&height=670);
+    background-size: cover;
+    background-repeat: no-repeat;
+        }
+
+input,
+textarea {
+    background-color: #F3E5F5;
+    border-radius: 50px !important;
+    padding: 12px 15px 12px 15px !important;
+    width: 100%;
+    box-sizing: border-box;
+    border: none !important;
+    border: 1px solid #F3E5F5 !important;
+    font-size: 16px !important;
+    color: #000 !important;
+    font-weight: 400
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #D500F9 !important;
+    outline-width: 0;
+    font-weight: 400
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.card {
+    border-radius: 0;
+    border: none
+}
+
+
+
+.card2 {
+    width: 50%;
+    background-image: linear-gradient(to right, #FFD54F, #D500F9)
+}
+
+#logo {
+    width: 70px;
+    height: 60px
+}
+
+.heading {
+    margin-bottom: 60px !important
+}
+
+::placeholder {
+    color: #000 !important;
+    opacity: 1
+}
+
+:-ms-input-placeholder {
+    color: #000 !important
+}
+
+::-ms-input-placeholder {
+    color: #000 !important
+}
+
+.form-control-label {
+    font-size: 12px;
+    margin-left: 15px
+}
+
+.msg-info {
+    padding-left: 15px;
+    margin-bottom: 30px
+}
+
+.btn-color {
+    border-radius: 50px;
+    color: #fff;
+    background-image: linear-gradient(to right, #FFD54F, #D500F9);
+    padding: 15px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 40px
+}
+
+.btn-color:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #D500F9, #FFD54F)
+}
+
+.btn-white {
+    border-radius: 50px;
+    color: #D500F9;
+    background-color: #fff;
+    padding: 8px 40px;
+    cursor: pointer;
+    border: 2px solid #D500F9 !important
+}
+
+.btn-white:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #FFD54F, #D500F9)
+}
+
+a {
+    color: #000
+}
+
+a:hover {
+    color: #000
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 50px !important
+}
+
+.sm-text {
+    font-size: 15px
+}
+
+@media screen and (max-width: 992px) {
+    .card1 {
+        width: 100%;
+        padding: 40px 30px 10px 30px
+    }
+
+    .card2 {
+        width: 100%
+    }
+
+    .right {
+        margin-top: 100px !important;
+        margin-bottom: 100px !important
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px !important
+    }
+
+    .card2 {
+        padding: 50px
+    }
+
+    .right {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important
+    }
+}
+    </style>
+     
+      
+</body>
+</html>
+
+    
+ 
